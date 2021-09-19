@@ -1,0 +1,5 @@
+*.pkl
+.env
+migrate.txt
+*.pyc
+*.log
