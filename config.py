@@ -12,6 +12,8 @@ class Config:
 	configurator_url_lock = threading.RLock()
 
 	http_port = 8083
+	discord_key = os.getenv('DISCORD_KEY')
+	last_update_threshold = 10
 
 	@staticmethod
 	def set_configurator_url(url:str):
