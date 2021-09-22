@@ -32,10 +32,6 @@ class Bot:
 						print(x)
 			
 	def start(self):
-		t = threading.Thread(name='flask', target=lambda:self.client.run(Config.discord_key))
-		t.setDaemon(True)
-		t.start()
-
 		t = threading.Thread(name='flask', target=self.loop)
 		t.setDaemon(True)
 		t.start()
