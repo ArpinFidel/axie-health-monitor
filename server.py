@@ -4,12 +4,13 @@ import flask
 import json
 
 from os import stat
-
+from flask_cors import CORS
 from repo import alarm, data_node, main_node
 
 class Server:
 	def __init__(self, host:str, port:int) -> None:
 		app = flask.Flask(__name__)
+		CORS(app, allow_headers=["*", "Content-Type", "Authorization", "Access-Control-Allow-Credentials"], supports_credentials=True)
 		self.app = app
 		self.host = host
 		self.port = port
